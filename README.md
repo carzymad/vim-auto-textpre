@@ -1,6 +1,9 @@
 # vim-auto-textpre
 vim文件预处理，文件新建时自动添加关键信息
 
+在~/.vimrc文件中添加这句：<p color="green">let author="crazymad"</p><br>
+author为文件作者名，这个可以自己随意赋值，crazymad是我的常用网名<br>
+
 .c<br>
 ![.c](https://github.com/carzymad/images/blob/master/main.c.png)
 
