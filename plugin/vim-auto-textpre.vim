@@ -67,3 +67,4 @@ func AddTitle()
 endfunc
 autocmd BufNewFile * normal G
 	
+echo author
