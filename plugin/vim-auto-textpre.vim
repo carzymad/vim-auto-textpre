@@ -2,10 +2,10 @@
 autocmd BufNewFile *.cpp,*.cc,*.c,*.hpp,*.h,*.sh,*.html,*.php exec ":call AddTitle()"
 func AddTitle()
 	call append(0, "/*********************************************************")
-	call append(1, " * Author			: ".author)
-	call append(2, " * Last modified	: ".strftime("%Y-%m-%d %H:%M"))
-	call append(3, " * Filename			: ".expand("%:t"))
-	call append(4, " * Description		: ")
+	call append(1, " * Author           : ".$author)
+	call append(2, " * Last modified    : ".strftime("%Y-%m-%d %H:%M"))
+	call append(3, " * Filename         : ".expand("%:t"))
+	call append(4, " * Description      : ")
 	call append(5, " *********************************************************/")
 	call append(6, "")
 		
