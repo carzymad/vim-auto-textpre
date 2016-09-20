@@ -66,4 +66,10 @@ func AddTitle()
 	endif
 endfunc
 autocmd BufNewFile * normal G
+
+autocmd BufWritePre *.* exec ":call updateTime()"
+func
+	echo "test"
+
+endfunc
 	
