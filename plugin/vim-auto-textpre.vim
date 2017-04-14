@@ -66,24 +66,3 @@ func AddTitle()
 	endif
 endfunc
 autocmd BufNewFile * normal G
-
-autocmd BufWritePost *.cpp exec ":call UpdateTime()"
-func UpdateTime()
-	let n=1
-	while n < 10
-		let line = getline(n)
-		if line =~ '^\s\*\s*\S*Last\smodified\S*.*$'
-			normal m'
-			execute 's/#Last modified/s@\=strftime(":\t%Y-%m-%d %H:%M")@'
-			normal ''
-			normal mk
-			execute "noh"
-			normal 'k
-			echohl WarningMsg | echo "Successful in updating the copyright." | echohl None
-			echo "test"
-		endif
-		let n = n + 1
-	endwhile
-endfunc
-autocmd BufWritePost * normal G
-
